@@ -1,0 +1,11 @@
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\bin\Debug\CarTracker.Repository.Common.dll
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\bin\Debug\CarTracker.Repository.Common.pdb
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\bin\Debug\CarTracker.Model.dll
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\bin\Debug\CarTracker.Model.Common.dll
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\bin\Debug\CarTracker.Model.pdb
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\bin\Debug\CarTracker.Model.Common.pdb
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\obj\Debug\CarTracker.Repository.Common.csproj.AssemblyReference.cache
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\obj\Debug\CarTracker.Repository.Common.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\obj\Debug\CarTracker.Repository.Common.csproj.CopyComplete
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\obj\Debug\CarTracker.Repository.Common.dll
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Repository.Common\obj\Debug\CarTracker.Repository.Common.pdb
