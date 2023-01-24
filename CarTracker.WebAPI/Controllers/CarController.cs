@@ -10,18 +10,25 @@ using CarTracker.Service;
 using CarTracker.Model;
 using CarTracker.WebAPI.Models;
 using System.Threading.Tasks;
+using CarTracker.Service.Common;
+using Autofac.Core;
 
 namespace CarTracker.WebAPI.Controllers
 {
     public class CarController : ApiController
     {
-        private static CarService carService = new CarService();
+        private ICarService CarService { get; set; }
+
+        public CarController(ICarService carService)
+        {
+            CarService = carService;
+        }
 
         //GET api/Car
         [HttpGet]
         public async Task<HttpResponseMessage> GetAsync()
         {
-            List<CarModel> cars = await carService.GetAllAsync();
+            List<CarModel> cars = await CarService.GetAllAsync();
             if (cars.Any())
             {
                 List<CarRest> carRests = new List<CarRest>();
@@ -34,11 +41,11 @@ namespace CarTracker.WebAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.NotFound);
         }
 
-        //GET api/Car?id=7E2DCB8F-8D83-4F64-9AE5-3F7BE66BB4A8
+        //GET api/Car?id=
         [HttpGet]
         public async Task<HttpResponseMessage> GetAsync(Guid id)
         {
-            CarModel car = await carService.GetAsync(id);
+            CarModel car = await CarService.GetAsync(id);
             if (car != null)
             {
                 return Request.CreateResponse(HttpStatusCode.OK, CarRest.MapCarRest(car));
@@ -52,14 +59,14 @@ namespace CarTracker.WebAPI.Controllers
         {
             if (newCar != null)
             {
-                CarModel carModel = new CarModel()
+                CarRest carRest = new CarRest()
                 {
                     Id = newCar.Id,
                     Manufacturer = newCar.Manufacturer,
                     Model = newCar.Model,
                     YearOfProduction = newCar.YearOfProduction
                 };
-                bool result = await carService.AddAsync(carModel);
+                bool result = await CarService.AddAsync(carRest.MapCar());
                 if (result)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK);
@@ -75,13 +82,13 @@ namespace CarTracker.WebAPI.Controllers
             }
         }
 
-        //PUT api/Car?id=7E2DCB8F-8D83-4F64-9AE5-3F7BE66BB4A8
+        //PUT api/Car?id=
         [HttpPut]
-        public async Task<HttpResponseMessage> PutAsync(Guid id, [FromBody] CarModel updatedCar)
+        public async Task<HttpResponseMessage> PutAsync(Guid id, [FromBody] CarRest updatedCar)
         {
             if (updatedCar != null)
             {
-                bool result = await carService.UpdateAsync(id, updatedCar);
+                bool result = await CarService.UpdateAsync(id, updatedCar.MapCar());
                 if (result)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK);
@@ -97,19 +104,16 @@ namespace CarTracker.WebAPI.Controllers
             }
         }
 
-        //DELETE api/Car?id=7E2DCB8F-8D83-4F64-9AE5-3F7BE66BB4A8
+        //DELETE api/Car?id=
         [HttpDelete]
-        public async Task<HttpResponseMessage> Delete(Guid id)
+        public async Task<HttpResponseMessage> DeleteAsync([FromUri] Guid id)
         {
-            bool result = await carService.DeleteAsync(id);
+            bool result = await CarService.DeleteAsync(id);
             if (result)
             {
                 return Request.CreateResponse(HttpStatusCode.OK);
             }
-            else
-            {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError);
-            }
+            return Request.CreateResponse(HttpStatusCode.InternalServerError);
         }
     }
 }

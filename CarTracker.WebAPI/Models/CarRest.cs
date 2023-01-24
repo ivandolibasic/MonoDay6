@@ -24,5 +24,16 @@ namespace CarTracker.WebAPI.Models
             };
             return carRest;
         }
+
+        public CarModel MapCar()
+        {
+            return new CarModel
+            {
+                Id = this.Id,
+                Manufacturer = this.Manufacturer,
+                Model = this.Model,
+                YearOfProduction = this.YearOfProduction
+            };
+        }
     }
 }

@@ -7,36 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using CarTracker.Repository.Common;
 
 namespace CarTracker.Service
 {
     public class CarService : ICarService
     {
-        CarRepository carRepository = new CarRepository();
+        private ICarRepository CarRepository { get; set; }
+
+        public CarService(ICarRepository carRepository)
+        {
+            CarRepository = carRepository;
+        }
 
         public async Task<List<CarModel>> GetAllAsync()
         {
-            return await carRepository.GetAllAsync();
+            return await CarRepository.GetAllAsync();
         }
 
         public async Task<CarModel> GetAsync(Guid id)
         {
-            return await carRepository.GetAsync(id);
+            return await CarRepository.GetAsync(id);
         }
 
         public async Task<bool> AddAsync(CarModel newCar)
         {
-            return await carRepository.AddAsync(newCar);
+            return await CarRepository.AddAsync(newCar);
         }
 
         public async Task<bool> UpdateAsync(Guid id, CarModel updatedCar)
         {
-            return await carRepository.UpdateAsync(id, updatedCar);
+            return await CarRepository.UpdateAsync(id, updatedCar);
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            return await carRepository.DeleteAsync(id);
+            return await CarRepository.DeleteAsync(id);
         }
     }
 }
