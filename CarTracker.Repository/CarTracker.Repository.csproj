@@ -83,6 +83,10 @@
     <Compile Include="RepositoryModule.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CarTracker.Common\CarTracker.Common.csproj">
+      <Project>{64CD4305-EC45-4CCD-AF09-F224D305E48F}</Project>
+      <Name>CarTracker.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CarTracker.Model.Common\CarTracker.Model.Common.csproj">
       <Project>{DBAAE8A5-9C66-4ED1-8672-B445E6CCD443}</Project>
       <Name>CarTracker.Model.Common</Name>

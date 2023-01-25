@@ -1,4 +1,5 @@
-﻿using CarTracker.Model;
+﻿using CarTracker.Common;
+using CarTracker.Model;
 using CarTracker.Model.Common;
 using CarTracker.Repository.Common;
 using System;
@@ -15,15 +16,36 @@ namespace CarTracker.Repository
     {
         private string connectionString = "Server=DESKTOP-AT3ON5G\\BORINCI; Database=MonoDB; User Id=IvanMono; Password=mono123;";
 
-        public async Task<List<CarModel>> GetAllAsync()
+        public async Task<List<CarModel>> GetAllAsync(Paging paging, Sorting sorting/*, Filtering filtering*/)
         {
             SqlConnection connection = null;
             try
             {
-                string sqlQuery = "SELECT * FROM Car";
+                
                 connection = new SqlConnection(connectionString);
                 await connection.OpenAsync();
+                StringBuilder builder = new StringBuilder();
+                builder.Append("SELECT * FROM Car");
+                string sqlQuery = builder.ToString();
                 SqlCommand command = new SqlCommand(sqlQuery, connection);
+                if (sorting.OrderName == "Manufacturer")
+                {
+                    builder.AppendLine(" ORDER BY Manufacturer ");
+                }
+                if (sorting.OrderDirection == "ASC")
+                {
+                    builder.AppendLine(" ASC;");
+                }
+                if (sorting.OrderDirection == "DESC")
+                {
+                    builder.AppendLine(" DESC;");
+                }
+                if (paging.PageNumber != 0 || paging.PageSize != 0)
+                {
+                    //builder.Append(" ORDER BY Manufacturer DESC ");
+                    builder.Append(" OFFSET " + paging.PageNumber + " ROWS ");
+                    builder.AppendLine(" FETCH NEXT " + paging.PageSize + " ROWS ONLY;");
+                }
                 SqlDataReader reader = await command.ExecuteReaderAsync();
                 List<CarModel> cars = new List<CarModel>();
                 while (await reader.ReadAsync())
@@ -50,6 +72,15 @@ namespace CarTracker.Repository
                     connection.Close();
                 }
             }
+            //if (paging != null)
+            //{
+            //    builder.Append(" OFFSET @pageNumber ROWS FETCH NEXT @pageSize ROWS ONLY");
+
+            //}
+            //if (sorting != null)
+            //{
+            //    builder.Append(" ORDER BY @orderName @orderDirection");
+            //}
         }
 
         public async Task<CarModel> GetAsync(Guid id)

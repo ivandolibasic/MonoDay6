@@ -12,6 +12,7 @@ using CarTracker.WebAPI.Models;
 using System.Threading.Tasks;
 using CarTracker.Service.Common;
 using Autofac.Core;
+using CarTracker.Common;
 
 namespace CarTracker.WebAPI.Controllers
 {
@@ -26,9 +27,13 @@ namespace CarTracker.WebAPI.Controllers
 
         //GET api/Car
         [HttpGet]
-        public async Task<HttpResponseMessage> GetAsync()
+        public async Task<HttpResponseMessage> GetAllAsync(int pageNumber, int pageSize, string orderName, string orderDirection)
         {
-            List<CarModel> cars = await CarService.GetAllAsync();
+            Paging paging = new Paging(pageNumber, pageSize);
+            Sorting sorting = new Sorting(orderName, orderDirection);
+            //Filtering filtering = new Filtering();
+
+            List<CarModel> cars = await CarService.GetAllAsync(paging, sorting/*, filtering*/);
             if (cars.Any())
             {
                 List<CarRest> carRests = new List<CarRest>();

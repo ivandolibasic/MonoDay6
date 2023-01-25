@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.WebAPI", "CarTracker.WebAPI\CarTracker.WebAPI.csproj", "{9AF005BA-A78D-4186-B601-063F3A46AE74}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14299A45-CBAC-43A6-9A39-629F7EF39574} = {14299A45-CBAC-43A6-9A39-629F7EF39574}
+		{34F5F4BF-509A-4A61-9D1B-A148324B97E7} = {34F5F4BF-509A-4A61-9D1B-A148324B97E7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.Service", "CarTracker.Service\CarTracker.Service.csproj", "{14299A45-CBAC-43A6-9A39-629F7EF39574}"
+	ProjectSection(ProjectDependencies) = postProject
+		{34F5F4BF-509A-4A61-9D1B-A148324B97E7} = {34F5F4BF-509A-4A61-9D1B-A148324B97E7}
+		{62287890-75F6-437F-B09A-B645C434F51E} = {62287890-75F6-437F-B09A-B645C434F51E}
+		{F1BE4E02-A896-4E4D-95CC-758BF2D66564} = {F1BE4E02-A896-4E4D-95CC-758BF2D66564}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.Repository", "CarTracker.Repository\CarTracker.Repository.csproj", "{62287890-75F6-437F-B09A-B645C434F51E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{34F5F4BF-509A-4A61-9D1B-A148324B97E7} = {34F5F4BF-509A-4A61-9D1B-A148324B97E7}
+		{F5E0949F-3F3A-4595-92F2-F28264CDB445} = {F5E0949F-3F3A-4595-92F2-F28264CDB445}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.Model", "CarTracker.Model\CarTracker.Model.csproj", "{34F5F4BF-509A-4A61-9D1B-A148324B97E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DBAAE8A5-9C66-4ED1-8672-B445E6CCD443} = {DBAAE8A5-9C66-4ED1-8672-B445E6CCD443}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.Service.Common", "CarTracker.Service.Common\CarTracker.Service.Common.csproj", "{F1BE4E02-A896-4E4D-95CC-758BF2D66564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.Repository.Common", "CarTracker.Repository.Common\CarTracker.Repository.Common.csproj", "{F5E0949F-3F3A-4595-92F2-F28264CDB445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.Model.Common", "CarTracker.Model.Common\CarTracker.Model.Common.csproj", "{DBAAE8A5-9C66-4ED1-8672-B445E6CCD443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.DAL", "CarTracker.DAL\CarTracker.DAL.csproj", "{1A31F6C8-EAD5-4C63-B758-5A589A1EE12A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTracker.Common", "CarTracker.Common\CarTracker.Common.csproj", "{64CD4305-EC45-4CCD-AF09-F224D305E48F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AF005BA-A78D-4186-B601-063F3A46AE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF005BA-A78D-4186-B601-063F3A46AE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF005BA-A78D-4186-B601-063F3A46AE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF005BA-A78D-4186-B601-063F3A46AE74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14299A45-CBAC-43A6-9A39-629F7EF39574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14299A45-CBAC-43A6-9A39-629F7EF39574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14299A45-CBAC-43A6-9A39-629F7EF39574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14299A45-CBAC-43A6-9A39-629F7EF39574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62287890-75F6-437F-B09A-B645C434F51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62287890-75F6-437F-B09A-B645C434F51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62287890-75F6-437F-B09A-B645C434F51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62287890-75F6-437F-B09A-B645C434F51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F5F4BF-509A-4A61-9D1B-A148324B97E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F5F4BF-509A-4A61-9D1B-A148324B97E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F5F4BF-509A-4A61-9D1B-A148324B97E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F5F4BF-509A-4A61-9D1B-A148324B97E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BE4E02-A896-4E4D-95CC-758BF2D66564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BE4E02-A896-4E4D-95CC-758BF2D66564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BE4E02-A896-4E4D-95CC-758BF2D66564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BE4E02-A896-4E4D-95CC-758BF2D66564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E0949F-3F3A-4595-92F2-F28264CDB445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E0949F-3F3A-4595-92F2-F28264CDB445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E0949F-3F3A-4595-92F2-F28264CDB445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E0949F-3F3A-4595-92F2-F28264CDB445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBAAE8A5-9C66-4ED1-8672-B445E6CCD443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAAE8A5-9C66-4ED1-8672-B445E6CCD443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBAAE8A5-9C66-4ED1-8672-B445E6CCD443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBAAE8A5-9C66-4ED1-8672-B445E6CCD443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A31F6C8-EAD5-4C63-B758-5A589A1EE12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A31F6C8-EAD5-4C63-B758-5A589A1EE12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A31F6C8-EAD5-4C63-B758-5A589A1EE12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A31F6C8-EAD5-4C63-B758-5A589A1EE12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CD4305-EC45-4CCD-AF09-F224D305E48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CD4305-EC45-4CCD-AF09-F224D305E48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CD4305-EC45-4CCD-AF09-F224D305E48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CD4305-EC45-4CCD-AF09-F224D305E48F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D659836C-2DCB-49CE-B5CB-0D3CE67F9BC9}
+	EndGlobalSection
+EndGlobal

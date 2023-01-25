@@ -32,3 +32,5 @@ C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Service.Common\bin\Debug\
 C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Service.Common\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Service.Common\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Service.Common\bin\Debug\System.Web.Http.xml
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Service.Common\bin\Debug\CarTracker.Common.dll
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.Service.Common\bin\Debug\CarTracker.Common.pdb

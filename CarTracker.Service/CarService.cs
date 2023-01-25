@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using CarTracker.Repository.Common;
+using CarTracker.Common;
 
 namespace CarTracker.Service
 {
@@ -20,9 +21,9 @@ namespace CarTracker.Service
             CarRepository = carRepository;
         }
 
-        public async Task<List<CarModel>> GetAllAsync()
+        public async Task<List<CarModel>> GetAllAsync(Paging paging, Sorting sorting/*, Filtering filtering*/)
         {
-            return await CarRepository.GetAllAsync();
+            return await CarRepository.GetAllAsync(paging, sorting/*, filtering*/);
         }
 
         public async Task<CarModel> GetAsync(Guid id)

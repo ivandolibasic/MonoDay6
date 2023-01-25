@@ -76,6 +76,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CarTracker.Common\CarTracker.Common.csproj">
+      <Project>{64CD4305-EC45-4CCD-AF09-F224D305E48F}</Project>
+      <Name>CarTracker.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CarTracker.Model\CarTracker.Model.csproj">
       <Project>{34f5f4bf-509a-4a61-9d1b-a148324b97e7}</Project>
       <Name>CarTracker.Model</Name>

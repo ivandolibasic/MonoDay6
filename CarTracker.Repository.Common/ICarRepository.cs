@@ -1,4 +1,5 @@
-﻿using CarTracker.Model;
+﻿using CarTracker.Common;
+using CarTracker.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace CarTracker.Repository.Common
 {
     public interface ICarRepository
     {
-        Task<List<CarModel>> GetAllAsync();
+        Task<List<CarModel>> GetAllAsync(Paging paging, Sorting sorting/*, Filtering filtering*/);
         Task<CarModel> GetAsync(Guid id);
         Task<bool> AddAsync(CarModel newCar);
         Task<bool> UpdateAsync(Guid id, CarModel updatedCar);

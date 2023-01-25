@@ -119,3 +119,5 @@ C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.WebAPI\bin\CarTracker.Rep
 C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.WebAPI\bin\CarTracker.Repository.Common.dll.config
 C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.WebAPI\bin\Autofac.Integration.WebApi.dll
 C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.WebAPI\bin\Autofac.Integration.WebApi.xml
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.WebAPI\bin\CarTracker.Common.dll
+C:\Users\Ivan\Documents\MonoDay5\CarTracker\CarTracker.WebAPI\bin\CarTracker.Common.pdb
